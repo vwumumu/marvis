@@ -17,3 +17,7 @@ Ingested raw/articles/as-we-may-think-summary.md. Pages created: [[as-we-may-thi
 ## [2026-04-15] query | How does the LLM Wiki pattern differ from RAG?
 
 Answered query synthesizing from 7 wiki pages. Answer persisted as [[how-does-llm-wiki-differ-from-rag|How does LLM Wiki differ from RAG?]]. Key sources cited: [[knowledge-compounding|Knowledge Compounding]], [[retrieval-augmented-generation|RAG]], [[incremental-integration|Incremental Integration]], [[memex|Memex]], [[vannevar-bush|Vannevar Bush]], [[associative-trails|Associative Trails]].
+
+## [2026-04-15] lint | Full Wiki Health Check
+
+Checked 10 wiki pages across 5 types. Results: 0 broken wikilinks, 1 orphan page (query page — expected), 3 missing entity suggestions (Engelbart, Nelson, Berners-Lee — low priority), index 100% complete, all frontmatter valid, 0 contradictions. No fixes needed.
