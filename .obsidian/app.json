@@ -1,0 +1,7 @@
+{
+  "userIgnoreFilters": [
+    ".planning/",
+    ".gitkeep"
+  ],
+  "attachmentFolderPath": "raw/assets"
+}
