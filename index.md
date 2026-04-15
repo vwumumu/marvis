@@ -25,3 +25,4 @@
 
 ## Queries
 <!-- Persisted answers to user questions -->
+- [[how-does-llm-wiki-differ-from-rag|How does LLM Wiki differ from RAG?]] — The LLM Wiki compiles knowledge incrementally while RAG rediscovers it; realizes Bush's 1945 Memex vision
