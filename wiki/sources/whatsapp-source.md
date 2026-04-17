@@ -80,3 +80,4 @@ Ack reactions (`channels.whatsapp.ackReaction`) fire immediately on inbound acce
 - [[openclaw|OpenClaw]] — the gateway that hosts the WhatsApp channel
 - [[whatsapp-channel|WhatsApp Channel]] — channel-specific entity details
 - [[baileys|Baileys]] — the WhatsApp Web library used for integration
+- [[pairing|Pairing]] — owner-approval flow behind the default `pairing` DM policy

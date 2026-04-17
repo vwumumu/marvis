@@ -38,3 +38,4 @@ Group behavior varies by channel, and model providers are configured separately 
 ## Related Pages
 - [[openclaw|OpenClaw]] — the gateway these channels connect through
 - [[ai-agent-gateway|AI Agent Gateway]] — architectural pattern enabling multi-channel support
+- [[pairing|Pairing]] — cross-channel owner-approval flow referenced by the safety section

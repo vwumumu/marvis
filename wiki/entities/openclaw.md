@@ -5,6 +5,7 @@ sources:
   - raw/articles/OpenClaw.md
   - "raw/articles/Chat Channels.md"
   - raw/articles/WhatsApp.md
+  - raw/articles/Pairing.md
 aliases:
   - OpenClaw Gateway
 category: tool
@@ -13,6 +14,7 @@ tags:
   - messaging-gateway
   - self-hosted
   - open-source
+  - pairing
 created: 2026-04-16
 updated: 2026-04-17
 ---
@@ -34,12 +36,15 @@ OpenClaw is a self-hosted, open-source gateway that connects messaging apps to A
 - **Recommended iMessage integration:** BlueBubbles, replacing deprecated imsg CLI (source: [[chat-channels-source|Chat Channels]])
 - **Mobile nodes:** iOS and Android with Canvas, camera, and voice workflows (source: [[openclaw-source|OpenClaw]])
 - **Key features:** Multi-channel messaging, multi-agent routing, media support, plugin extensibility, workspace isolation (source: [[openclaw-source|OpenClaw]])
+- **Owner-approval gating:** Both DM access and device/node onboarding use the [[pairing|pairing]] flow — 8-char codes approved via `openclaw pairing approve <channel> <CODE>`; devices approved via `openclaw devices approve <requestId>` (source: [[pairing-source|Pairing]])
+- **State directories:** `~/.openclaw/credentials/` holds DM pairing state (`<channel>-pairing.json`, `<channel>-allowFrom.json`, plus account-scoped variants); `~/.openclaw/devices/` holds device pairing state (`pending.json`, `paired.json`) (source: [[pairing-source|Pairing]])
 - **Documentation:** https://docs.openclaw.ai/ (source: [[openclaw-source|OpenClaw]])
 
 ## Appearances in Sources
 - [[openclaw-source|OpenClaw]] — primary documentation source
 - [[chat-channels-source|Chat Channels]] — detailed channel listing and integration methods
 - [[whatsapp-source|WhatsApp]] — per-channel configuration reference exemplifying the gateway's policy model
+- [[pairing-source|Pairing]] — DM and device pairing (owner-approval) flows
 
 ## Related Entities
 - [[pi-agent|Pi]] — AI coding agent bundled with OpenClaw
@@ -48,3 +53,4 @@ OpenClaw is a self-hosted, open-source gateway that connects messaging apps to A
 
 ## Related Concepts
 - [[ai-agent-gateway|AI Agent Gateway]] — the architectural pattern OpenClaw implements
+- [[pairing|Pairing]] — owner-approval gate for DMs and device onboarding

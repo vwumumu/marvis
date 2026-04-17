@@ -7,6 +7,7 @@
 - [[openclaw-source|OpenClaw]] — Self-hosted multi-channel gateway for AI coding agents (2026-04-16)
 - [[chat-channels-source|Chat Channels]] — Detailed listing of 26+ supported messaging channels and integration methods (2026-04-16)
 - [[whatsapp-source|WhatsApp]] — OpenClaw WhatsApp channel configuration, runtime model, and policy reference (2026-04-17)
+- [[pairing-source|Pairing]] — OpenClaw DM and node-device pairing flows, state layout, and bootstrap token scopes (2026-04-17)
 
 ## Entities
 <!-- Entity pages — people, organizations, tools, places -->
@@ -18,6 +19,7 @@
 ## Concepts
 <!-- Concept pages — ideas, frameworks, patterns, themes -->
 - [[ai-agent-gateway|AI Agent Gateway]] — Architectural pattern: single process bridging multiple chat platforms to AI agents
+- [[pairing|Pairing]] — Owner-approval gate for DM access and node/device onboarding in OpenClaw
 
 ## Synthesis
 <!-- Cross-cutting analyses, comparisons, timelines -->

@@ -4,6 +4,7 @@ type: entity
 sources:
   - "raw/articles/Chat Channels.md"
   - raw/articles/WhatsApp.md
+  - raw/articles/Pairing.md
 aliases:
   - OpenClaw WhatsApp
   - "@openclaw/whatsapp"
@@ -13,6 +14,7 @@ tags:
   - whatsapp
   - chat-channel
   - baileys
+  - pairing
 created: 2026-04-17
 updated: 2026-04-17
 ---
@@ -34,8 +36,10 @@ The WhatsApp channel is OpenClaw's production-ready integration with WhatsApp We
 
 ## Access Control
 - **DM policies:** `pairing` (default), `allowlist`, `open` (requires `*` in `allowFrom`), `disabled` (source: [[whatsapp-source|WhatsApp]])
+- **Pairing flow:** under the default `pairing` policy, unknown senders get an 8-char code (1-hour expiry, max 3 pending per channel) that the owner approves via `openclaw pairing approve whatsapp <CODE>` (source: [[pairing-source|Pairing]])
+- **Approved-sender storage:** `~/.openclaw/credentials/whatsapp-allowFrom.json` for the default account; `whatsapp-<accountId>-allowFrom.json` for non-default accounts. Pending requests in `whatsapp-pairing.json` (source: [[pairing-source|Pairing]])
 - **Allowlist format:** E.164-style numbers, normalized internally (source: [[whatsapp-source|WhatsApp]])
-- **Group policy + allowlists + mention gating** available; duplicate JSON5 keys cause later entries to override earlier (source: [[whatsapp-source|WhatsApp]])
+- **Group policy + allowlists + mention gating** available; duplicate JSON5 keys cause later entries to override earlier (source: [[whatsapp-source|WhatsApp]]). DM pairing approval never grants group access (source: [[pairing-source|Pairing]])
 
 ## Message Handling
 - **Text chunking:** `textChunkLimit = 4000` default; modes `length` or `newline` (paragraph-preferred) (source: [[whatsapp-source|WhatsApp]])
@@ -51,7 +55,11 @@ Status (`@status`) and broadcast (`@broadcast`) chats are always ignored (source
 ## Appearances in Sources
 - [[whatsapp-source|WhatsApp]] — primary channel documentation
 - [[chat-channels-source|Chat Channels]] — listed as a built-in channel using Baileys
+- [[pairing-source|Pairing]] — DM pairing mechanism used by the default `pairing` policy
 
 ## Related Entities
 - [[openclaw|OpenClaw]] — the gateway that hosts this channel
 - [[baileys|Baileys]] — underlying WhatsApp Web library
+
+## Related Concepts
+- [[pairing|Pairing]] — owner-approval flow behind the default `pairing` DM policy

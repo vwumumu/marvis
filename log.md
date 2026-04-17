@@ -10,3 +10,6 @@ Ingested OpenClaw Chat Channels documentation (26+ supported messaging platforms
 
 ## [2026-04-17] ingest | WhatsApp
 Ingested OpenClaw WhatsApp channel documentation (Baileys-based WhatsApp Web integration, full config reference). Pages created: [[whatsapp-source|WhatsApp (source)]], [[whatsapp-channel|WhatsApp Channel (entity)]], [[baileys|Baileys (entity)]]. Pages updated: [[openclaw|OpenClaw (entity)]].
+
+## [2026-04-17] ingest | Pairing
+Ingested OpenClaw pairing documentation (DM pairing + node-device pairing, owner-approval flow, bootstrap token scopes). Pages created: [[pairing-source|Pairing (source)]], [[pairing|Pairing (concept)]]. Pages updated: [[openclaw|OpenClaw (entity)]], [[whatsapp-channel|WhatsApp Channel (entity)]], [[whatsapp-source|WhatsApp (source)]], [[chat-channels-source|Chat Channels (source)]].
