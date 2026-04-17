@@ -5,6 +5,7 @@
 ## Sources
 <!-- Source summary pages — one per ingested source -->
 - [[openclaw-source|OpenClaw]] — Self-hosted multi-channel gateway for AI coding agents (2026-04-16)
+- [[chat-channels-source|Chat Channels]] — Detailed listing of 26+ supported messaging channels and integration methods (2026-04-16)
 
 ## Entities
 <!-- Entity pages — people, organizations, tools, places -->

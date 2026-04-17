@@ -3,6 +3,7 @@ title: "OpenClaw"
 type: entity
 sources:
   - raw/articles/OpenClaw.md
+  - "raw/articles/Chat Channels.md"
 aliases:
   - OpenClaw Gateway
 category: tool
@@ -12,7 +13,7 @@ tags:
   - self-hosted
   - open-source
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-17
 ---
 
 # OpenClaw
@@ -27,13 +28,16 @@ OpenClaw is a self-hosted, open-source gateway that connects messaging apps to A
 - **Default agent:** Bundled Pi binary in RPC mode (source: [[openclaw-source|OpenClaw]])
 - **Configuration:** `~/.openclaw/openclaw.json` (source: [[openclaw-source|OpenClaw]])
 - **Control UI:** Browser dashboard at `http://127.0.0.1:18789/` for chat, config, and sessions (source: [[openclaw-source|OpenClaw]])
-- **Supported channels:** Discord, Google Chat, iMessage, Matrix, Microsoft Teams, Signal, Slack, Telegram, WhatsApp, Zalo, WebChat, plus plugin channels (Nostr, Twitch) (source: [[openclaw-source|OpenClaw]])
+- **Supported channels (26+):** Built-in: Discord, Google Chat, Signal, Slack, Telegram, WebChat, WhatsApp. Bundled plugins: BlueBubbles (iMessage), Feishu/Lark, IRC, LINE, Matrix, Mattermost, Microsoft Teams, Nextcloud Talk, Nostr, QQ Bot, Synology Chat, Tlon, Twitch, Zalo, Zalo Personal. External plugins: Voice Call (Plivo/Twilio), WeChat. Legacy: iMessage via imsg CLI (deprecated) (source: [[chat-channels-source|Chat Channels]])
+- **Fastest channel setup:** Telegram (simple bot token); WhatsApp requires QR pairing and stores more state (source: [[chat-channels-source|Chat Channels]])
+- **Recommended iMessage integration:** BlueBubbles, replacing deprecated imsg CLI (source: [[chat-channels-source|Chat Channels]])
 - **Mobile nodes:** iOS and Android with Canvas, camera, and voice workflows (source: [[openclaw-source|OpenClaw]])
 - **Key features:** Multi-channel messaging, multi-agent routing, media support, plugin extensibility, workspace isolation (source: [[openclaw-source|OpenClaw]])
 - **Documentation:** https://docs.openclaw.ai/ (source: [[openclaw-source|OpenClaw]])
 
 ## Appearances in Sources
 - [[openclaw-source|OpenClaw]] — primary documentation source
+- [[chat-channels-source|Chat Channels]] — detailed channel listing and integration methods
 
 ## Related Entities
 - [[pi-agent|Pi]] — AI coding agent bundled with OpenClaw
