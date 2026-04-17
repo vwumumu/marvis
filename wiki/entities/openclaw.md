@@ -4,6 +4,7 @@ type: entity
 sources:
   - raw/articles/OpenClaw.md
   - "raw/articles/Chat Channels.md"
+  - raw/articles/WhatsApp.md
 aliases:
   - OpenClaw Gateway
 category: tool
@@ -38,9 +39,12 @@ OpenClaw is a self-hosted, open-source gateway that connects messaging apps to A
 ## Appearances in Sources
 - [[openclaw-source|OpenClaw]] — primary documentation source
 - [[chat-channels-source|Chat Channels]] — detailed channel listing and integration methods
+- [[whatsapp-source|WhatsApp]] — per-channel configuration reference exemplifying the gateway's policy model
 
 ## Related Entities
 - [[pi-agent|Pi]] — AI coding agent bundled with OpenClaw
+- [[whatsapp-channel|WhatsApp Channel]] — production-ready channel using Baileys
+- [[baileys|Baileys]] — WhatsApp Web library backing the WhatsApp channel
 
 ## Related Concepts
 - [[ai-agent-gateway|AI Agent Gateway]] — the architectural pattern OpenClaw implements

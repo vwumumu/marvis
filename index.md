@@ -6,11 +6,14 @@
 <!-- Source summary pages — one per ingested source -->
 - [[openclaw-source|OpenClaw]] — Self-hosted multi-channel gateway for AI coding agents (2026-04-16)
 - [[chat-channels-source|Chat Channels]] — Detailed listing of 26+ supported messaging channels and integration methods (2026-04-16)
+- [[whatsapp-source|WhatsApp]] — OpenClaw WhatsApp channel configuration, runtime model, and policy reference (2026-04-17)
 
 ## Entities
 <!-- Entity pages — people, organizations, tools, places -->
 - [[openclaw|OpenClaw]] — Self-hosted, open-source AI agent gateway bridging messaging apps to coding agents
 - [[pi-agent|Pi]] — AI coding agent bundled with OpenClaw
+- [[whatsapp-channel|WhatsApp Channel]] — Production-ready OpenClaw channel via Baileys (WhatsApp Web)
+- [[baileys|Baileys]] — WhatsApp Web library powering OpenClaw's WhatsApp channel
 
 ## Concepts
 <!-- Concept pages — ideas, frameworks, patterns, themes -->
