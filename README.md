@@ -2,9 +2,16 @@
 
 A personal knowledge base where the LLM **compiles** knowledge into a persistent, interlinked wiki — not retrieves it on every query like RAG. Drop in source documents, and Claude Code reads, extracts, and weaves them into an ever-growing wiki of markdown pages with cross-references, contradiction flags, and layered synthesis. Browse the result in Obsidian.
 
-## TL;DR — Three Things You'll Ever Type
+## TL;DR
 
-Once the vault is cloned and opened in Claude Code, everything is just three commands:
+**What it is:** a concrete implementation of Andrej Karpathy's [LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) — the LLM maintains a persistent markdown wiki of your sources instead of doing RAG on every query.
+
+**You'll need:**
+- **[Claude Code](https://claude.ai/claude-code)** — the LLM that reads sources and writes the wiki. Any long-context agent that can read/write files would work in principle; the schema in `CLAUDE.md` is tuned for Claude Code
+- **[Obsidian](https://obsidian.md/)** — for browsing. Obsidian gives you `[[wikilinks]]`, backlinks, and Graph View out of the box, which are the whole point of storing knowledge as an interlinked wiki. Any markdown editor will open the files, but without wikilink support you lose most of the value
+- **Git** — every operation is auto-committed
+
+**Everything you'll ever type, once the vault is open in Claude Code:**
 
 ```
 # 1. Ingest — add a source to the wiki
@@ -17,7 +24,7 @@ what's the relationship between X and Y?
 lint
 ```
 
-That's the entire surface area. Everything else in this README is explaining what those three commands do and why the output is worth keeping.
+That's the entire surface area. Everything else in this README explains what those three commands do and why the output is worth keeping.
 
 ---
 
@@ -207,9 +214,16 @@ Checks for: broken wikilinks, orphan pages, missing entity pages, index complete
 
 Marvis 是一个由 LLM 驱动的个人知识库系统。你负责提供原始资料和提问，Claude Code 负责所有的整理、归档、交叉引用和维护工作。你在 Obsidian 中浏览，Claude Code 在后台写作——wiki 会随着每次投喂自动生长。
 
-## TL;DR——你一共只需要打三条命令
+## TL;DR
 
-clone 好仓库、在 Claude Code 里打开之后，日常用法就是三条：
+**这是什么：** Andrej Karpathy 提出的 [LLM Wiki 模式](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) 的一个具体实现——让 LLM 维护一份持续增长的 markdown wiki，而不是每次查询都在向量库里重新召回。
+
+**你需要准备：**
+- **[Claude Code](https://claude.ai/claude-code)**——读资料、写 wiki 的 LLM。理论上任何能读写文件的长上下文 agent 都可以，但 `CLAUDE.md` 里的规范是针对 Claude Code 调的
+- **[Obsidian](https://obsidian.md/)**——浏览端。Obsidian 原生支持 `[[双向链接]]`、反向链接面板、Graph View，这些正是"把知识存成互联 wiki"的意义所在。其他 markdown 编辑器也能打开这些文件，但没有 wikilink 支持的话，价值会大打折扣
+- **Git**——所有操作自动 commit
+
+**仓库 clone 下来、在 Claude Code 里打开之后，你一共只需要打三条命令：**
 
 ```
 # 1. 投喂（Ingest）——把新资料加入 wiki
@@ -222,7 +236,7 @@ X 和 Y 是什么关系？
 lint
 ```
 
-所有日常操作只有这三个动作。README 后面的内容都是在解释这三条命令背后发生了什么、为什么产出的东西值得留下来。
+日常操作只有这三个动作。README 后面的内容都是在解释这三条命令背后发生了什么、为什么产出的东西值得留下来。
 
 ## 它和别的工具有什么不同
 
