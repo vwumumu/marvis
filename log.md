@@ -13,3 +13,6 @@ Ingested OpenClaw WhatsApp channel documentation (Baileys-based WhatsApp Web int
 
 ## [2026-04-17] ingest | Pairing
 Ingested OpenClaw pairing documentation (DM pairing + node-device pairing, owner-approval flow, bootstrap token scopes). Pages created: [[pairing-source|Pairing (source)]], [[pairing|Pairing (concept)]]. Pages updated: [[openclaw|OpenClaw (entity)]], [[whatsapp-channel|WhatsApp Channel (entity)]], [[whatsapp-source|WhatsApp (source)]], [[chat-channels-source|Chat Channels (source)]].
+
+## [2026-04-20] ingest | Groups
+Ingested OpenClaw Groups documentation (unified group-chat model: policy, allowlists, mention gating, session isolation, per-group tool restrictions, activation command). Pages created: [[groups-source|Groups (source)]], [[group-policy|Group Policy (concept)]]. Pages updated: [[openclaw|OpenClaw (entity)]], [[whatsapp-channel|WhatsApp Channel (entity)]], [[pairing|Pairing (concept)]], [[ai-agent-gateway|AI Agent Gateway (concept)]].

@@ -4,14 +4,16 @@ type: concept
 sources:
   - raw/articles/OpenClaw.md
   - "raw/articles/Chat Channels.md"
+  - raw/articles/Groups.md
 related:
   - "[[multi-agent-routing|Multi-Agent Routing]]"
+  - "[[group-policy|Group Policy]]"
 tags:
   - ai-agent
   - messaging-gateway
   - architecture
 created: 2026-04-16
-updated: 2026-04-17
+updated: 2026-04-20
 ---
 
 # AI Agent Gateway
@@ -27,10 +29,14 @@ An AI agent gateway is a self-hosted process that acts as a bridge between multi
 - Channel extensibility via plugins allows adding new messaging platforms without modifying the core gateway (source: [[openclaw-source|OpenClaw]])
 - Real-world implementations span 26+ channels across consumer messaging, enterprise platforms, decentralized protocols (Nostr, Matrix), self-hosted solutions (Nextcloud Talk, Synology Chat), and telephony (Plivo/Twilio) (source: [[chat-channels-source|Chat Channels]])
 - Text support is universal across channels, while media and reaction capabilities vary by channel (source: [[chat-channels-source|Chat Channels]])
+- Cross-channel uniformity extends beyond transport: the same [[group-policy|Group Policy]] evaluation order (`groupPolicy` → allowlists → mention gating) runs identically across nine surfaces, so security reasoning and configuration skills transfer between channels (source: [[groups-source|Groups]])
+- Session-key namespacing (DMs on main session, groups on `:group:<id>`, rooms on `:channel:<id>`, topics on `:topic:<threadId>`) gives the gateway a natural seam for split execution — e.g., sandbox only non-main sessions so a single agent can run DMs on-host and groups in Docker (source: [[groups-source|Groups]])
 
 ## Sources
 - [[openclaw-source|OpenClaw]] — describes the AI agent gateway pattern as implemented by OpenClaw
 - [[chat-channels-source|Chat Channels]] — details the breadth of channel types a gateway can serve
+- [[groups-source|Groups]] — uniform group model and session-key isolation across channels
 
 ## Related Concepts
 - Multi-agent routing — isolating sessions per agent or workspace within the gateway
+- [[group-policy|Group Policy]] — the cross-channel group access model this gateway pattern enables

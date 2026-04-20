@@ -8,6 +8,7 @@
 - [[chat-channels-source|Chat Channels]] — Detailed listing of 26+ supported messaging channels and integration methods (2026-04-16)
 - [[whatsapp-source|WhatsApp]] — OpenClaw WhatsApp channel configuration, runtime model, and policy reference (2026-04-17)
 - [[pairing-source|Pairing]] — OpenClaw DM and node-device pairing flows, state layout, and bootstrap token scopes (2026-04-17)
+- [[groups-source|Groups]] — OpenClaw unified group-chat model across nine channels: policy, allowlists, mention gating, session isolation (2026-04-20)
 
 ## Entities
 <!-- Entity pages — people, organizations, tools, places -->
@@ -20,6 +21,7 @@
 <!-- Concept pages — ideas, frameworks, patterns, themes -->
 - [[ai-agent-gateway|AI Agent Gateway]] — Architectural pattern: single process bridging multiple chat platforms to AI agents
 - [[pairing|Pairing]] — Owner-approval gate for DM access and node/device onboarding in OpenClaw
+- [[group-policy|Group Policy]] — Unified group-chat access model (policy + allowlists + mention gating) applied across nine OpenClaw channels
 
 ## Synthesis
 <!-- Cross-cutting analyses, comparisons, timelines -->

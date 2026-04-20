@@ -6,6 +6,7 @@ sources:
   - "raw/articles/Chat Channels.md"
   - raw/articles/WhatsApp.md
   - raw/articles/Pairing.md
+  - raw/articles/Groups.md
 aliases:
   - OpenClaw Gateway
 category: tool
@@ -15,8 +16,9 @@ tags:
   - self-hosted
   - open-source
   - pairing
+  - group-chat
 created: 2026-04-16
-updated: 2026-04-17
+updated: 2026-04-20
 ---
 
 # OpenClaw
@@ -38,6 +40,8 @@ OpenClaw is a self-hosted, open-source gateway that connects messaging apps to A
 - **Key features:** Multi-channel messaging, multi-agent routing, media support, plugin extensibility, workspace isolation (source: [[openclaw-source|OpenClaw]])
 - **Owner-approval gating:** Both DM access and device/node onboarding use the [[pairing|pairing]] flow — 8-char codes approved via `openclaw pairing approve <channel> <CODE>`; devices approved via `openclaw devices approve <requestId>` (source: [[pairing-source|Pairing]])
 - **State directories:** `~/.openclaw/credentials/` holds DM pairing state (`<channel>-pairing.json`, `<channel>-allowFrom.json`, plus account-scoped variants); `~/.openclaw/devices/` holds device pairing state (`pending.json`, `paired.json`) (source: [[pairing-source|Pairing]])
+- **Uniform group model:** [[group-policy|Group Policy]] applies identically across nine surfaces (Discord, iMessage, Matrix, Microsoft Teams, Signal, Slack, Telegram, WhatsApp, Zalo) — three-gate evaluation (`groupPolicy` → allowlists → mention gating) with fail-closed `allowlist` default (source: [[groups-source|Groups]])
+- **Session-key isolation:** DMs use the main session; groups always use `agent:<agentId>:<channel>:group:<id>` (rooms use `:channel:<id>`, Telegram forum topics append `:topic:<threadId>`) — enabling single-agent "DMs on host, groups sandboxed" via `sandbox.mode: "non-main"` (source: [[groups-source|Groups]])
 - **Documentation:** https://docs.openclaw.ai/ (source: [[openclaw-source|OpenClaw]])
 
 ## Appearances in Sources
@@ -45,6 +49,7 @@ OpenClaw is a self-hosted, open-source gateway that connects messaging apps to A
 - [[chat-channels-source|Chat Channels]] — detailed channel listing and integration methods
 - [[whatsapp-source|WhatsApp]] — per-channel configuration reference exemplifying the gateway's policy model
 - [[pairing-source|Pairing]] — DM and device pairing (owner-approval) flows
+- [[groups-source|Groups]] — unified group-chat access control across nine channels
 
 ## Related Entities
 - [[pi-agent|Pi]] — AI coding agent bundled with OpenClaw
@@ -54,3 +59,4 @@ OpenClaw is a self-hosted, open-source gateway that connects messaging apps to A
 ## Related Concepts
 - [[ai-agent-gateway|AI Agent Gateway]] — the architectural pattern OpenClaw implements
 - [[pairing|Pairing]] — owner-approval gate for DMs and device onboarding
+- [[group-policy|Group Policy]] — unified group-chat access model applied across channels

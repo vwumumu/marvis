@@ -5,8 +5,10 @@ sources:
   - raw/articles/Pairing.md
   - raw/articles/WhatsApp.md
   - "raw/articles/Chat Channels.md"
+  - raw/articles/Groups.md
 related:
   - "[[ai-agent-gateway|AI Agent Gateway]]"
+  - "[[group-policy|Group Policy]]"
 tags:
   - openclaw
   - access-control
@@ -14,7 +16,7 @@ tags:
   - devices
   - security
 created: 2026-04-17
-updated: 2026-04-17
+updated: 2026-04-20
 ---
 
 # Pairing
@@ -28,7 +30,7 @@ In OpenClaw, pairing is the explicit owner-approval gate that admits trust into 
 - **CLI approval.** `openclaw pairing list <channel>` / `openclaw pairing approve <channel> <CODE>` for DMs; `openclaw devices list/approve/reject` for nodes (source: [[pairing-source|Pairing]])
 - **DM policy integration.** `pairing` is one of four channel `dmPolicy` modes (alongside `allowlist`, `open`, `disabled`) — the default on WhatsApp (source: [[whatsapp-source|WhatsApp]])
 - **Broad channel support.** DM pairing works across 20+ channels including bluebubbles, discord, imessage, matrix, msteams, signal, slack, telegram, whatsapp, openclaw-weixin, and zalo (source: [[pairing-source|Pairing]])
-- **Scope boundary: DMs only.** Approving a DM pairing code never grants group access — group authorization is a separate store using per-channel constructs like `groupAllowFrom`, `groups`, or per-group overrides (source: [[pairing-source|Pairing]])
+- **Scope boundary: DMs only.** Approving a DM pairing code never grants group access — group authorization is a separate store using per-channel constructs like `groupAllowFrom`, `groups`, or per-group overrides (source: [[pairing-source|Pairing]]). This boundary is reinforced at the group evaluation layer itself: the [[group-policy|Group Policy]] flow consults group allowlists, not DM pairing stores, when gating triggers (source: [[groups-source|Groups]])
 - **Account-scoped DM storage.** DM pending requests live in `~/.openclaw/credentials/<channel>-pairing.json`; approved allowlists live in `<channel>-allowFrom.json` for the default account and `<channel>-<accountId>-allowFrom.json` for non-default accounts (source: [[pairing-source|Pairing]])
 - **Setup code = bootstrap secret.** Node pairing setup codes are base64-encoded JSON containing a WebSocket URL and a short-lived `bootstrapToken` — to be treated like a password while valid (source: [[pairing-source|Pairing]])
 - **Role-prefixed scope checks.** Bootstrap scope validation is role-prefixed: operator scopes (`operator.approvals`, `operator.read`, `operator.talk.secrets`, `operator.write`) only satisfy operator requests; non-operator roles must request scopes under their own role prefix (source: [[pairing-source|Pairing]])
@@ -40,6 +42,8 @@ In OpenClaw, pairing is the explicit owner-approval gate that admits trust into 
 - [[pairing-source|Pairing]] — canonical description of DM and device pairing
 - [[whatsapp-source|WhatsApp]] — pairing as the default DM policy on the WhatsApp channel
 - [[chat-channels-source|Chat Channels]] — channel-level DM pairing and allowlist enforcement
+- [[groups-source|Groups]] — reinforces the DM-vs-group scope boundary from the evaluation side
 
 ## Related Concepts
 - [[ai-agent-gateway|AI Agent Gateway]] — pairing is the owner-trust boundary of a self-hosted gateway
+- [[group-policy|Group Policy]] — the separate access-control surface pairing deliberately does not extend to
