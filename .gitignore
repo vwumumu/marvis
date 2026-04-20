@@ -13,3 +13,12 @@
 
 # Project planning (internal development artifacts)
 .planning/
+
+# Obsidian trash (deleted files moved here before permanent removal)
+.trash/
+
+# Default Obsidian Web Clipper output (route clippings into raw/articles/ instead)
+Clippings/
+
+# Unstructured auxiliary files under raw/ (e.g., stylesheets, images, scratch)
+raw/articles/docs/
