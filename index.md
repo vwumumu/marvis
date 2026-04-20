@@ -9,6 +9,7 @@
 - [[whatsapp-source|WhatsApp]] — OpenClaw WhatsApp channel configuration, runtime model, and policy reference (2026-04-17)
 - [[pairing-source|Pairing]] — OpenClaw DM and node-device pairing flows, state layout, and bootstrap token scopes (2026-04-17)
 - [[groups-source|Groups]] — OpenClaw unified group-chat model across nine channels: policy, allowlists, mention gating, session isolation (2026-04-20)
+- [[group-messages-source|Group Messages (WhatsApp)]] — WhatsApp-specific group behavior: activation modes, per-group sessions, context markers, session commands (2026-04-20)
 
 ## Entities
 <!-- Entity pages — people, organizations, tools, places -->

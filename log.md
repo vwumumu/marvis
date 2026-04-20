@@ -16,3 +16,6 @@ Ingested OpenClaw pairing documentation (DM pairing + node-device pairing, owner
 
 ## [2026-04-20] ingest | Groups
 Ingested OpenClaw Groups documentation (unified group-chat model: policy, allowlists, mention gating, session isolation, per-group tool restrictions, activation command). Pages created: [[groups-source|Groups (source)]], [[group-policy|Group Policy (concept)]]. Pages updated: [[openclaw|OpenClaw (entity)]], [[whatsapp-channel|WhatsApp Channel (entity)]], [[pairing|Pairing (concept)]], [[ai-agent-gateway|AI Agent Gateway (concept)]].
+
+## [2026-04-20] ingest | Group Messages (WhatsApp)
+Ingested OpenClaw WhatsApp Group Messages documentation (activation modes, per-group sessions, context-marker format, session-scoped commands, echo suppression). Pages created: [[group-messages-source|Group Messages (WhatsApp) (source)]]. Pages updated: [[whatsapp-channel|WhatsApp Channel (entity)]], [[group-policy|Group Policy (concept)]].
